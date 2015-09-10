@@ -1,16 +1,21 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
-| Application Routes
+| アプリケーションのルート
 |--------------------------------------------------------------------------
 |
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
+| ここでアプリケーションのルートを全て登録することが可能です。
+| 簡単です。ただ、Laravelへ対応するURIと、そのURIがリクエスト
+| されたときに呼び出されるコントローラーを指定してください。
 |
 */
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('another', function(){
+  return 'This is another way to go.';
+});
+
+Route::get('myview', 'MyController@show');
