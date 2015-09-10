@@ -3,6 +3,6 @@
 class MyController extends Controller{
     function show(){
         $name = 'Junpei Simotsu';
-        return View('myFirstView', $name);
+        return View('myFirstView', compact('name'));
     }
 }
